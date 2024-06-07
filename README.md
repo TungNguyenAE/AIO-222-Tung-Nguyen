@@ -1,2 +1,2 @@
-# AIO-222-Tung-Nguyen
-AIO 2024 excercises and projects
+# AIO2024_Excercises
+AIO Excercises
