@@ -50,29 +50,29 @@ class Doctor(Person):
 class Ward():
     def __init__(self, name: str):
         self.__name = name
-        self.__listPeople = list()
+        self.__list_people = list()
 
     def add_person(self, person: Person):
-        self.__listPeople.append(person)
+        self.__list_people.append(person)
 
     def describe(self):
         print(f"Ward Name: {self.__name}")
-        for p in self.__listPeople:
+        for p in self.__list_people:
             p. describe()
 
     def count_doctor(self):
         counter = 0
-        for p in self.__listPeople:
+        for p in self.__list_people:
             if hasattr(p, '_specialist'):
                 counter += 1
         return counter
 
     def sort_age(self):
-        return self.__listPeople.sort(key=lambda x: x._yob, reverse=True)
+        return self.__list_people.sort(key=lambda x: x._yob, reverse=True)
 
     def compute_average(self):
         teachers = []
-        for p in self.__listPeople:
+        for p in self.__list_people:
             if hasattr(p, '_subject'):
                 teachers.append(p._yob)
         return sum(teachers)/len(teachers)

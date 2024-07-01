@@ -33,23 +33,27 @@ if __name__ == "__main__":
     data = torch . Tensor([1, 2, 3])
     softmax_function = nn. Softmax(dim=0)
     output = softmax_function(data)
-    assert round(output[0]. item(), 2) == 0.09
+    assert torch.isclose(
+        round(output[0]. item(), 2), 0.09, rtol=1e-09, atol=1e-09)
     print(output)
 
     data = torch . Tensor([5, 2, 4])
     my_softmax = MySoftmax()
     output = my_softmax(data)
-    assert round(output[-1]. item(), 2) == 0.26
+    assert torch.isclose(
+        round(output[-1]. item(), 2), 0.26, rtol=1e-09, atol=1e-09)
     print(output)
 
     data = torch . Tensor([1, 2, 300000000])
     my_softmax = MySoftmax()
     output = my_softmax(data)
-    assert round(output[0]. item(), 2) == 0.0
+    assert torch.isclose(
+        round(output[0]. item(), 2), 0.0, rtol=1e-09, atol=1e-09)
     print(output)
 
     data = torch . Tensor([1, 2, 3])
     softmax_stable = SoftmaxStable()
     output = softmax_stable(data)
-    assert round(output[-1]. item(), 2) == 0.67
+    assert torch.isclose(
+        round(output[-1]. item(), 2), 0.67, rtol=1e-09, atol=1e-09)
     print(output)
