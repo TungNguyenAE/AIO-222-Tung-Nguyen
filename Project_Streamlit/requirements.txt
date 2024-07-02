@@ -1,3 +1,0 @@
-hugchat
-opencv-python
-streamlit
