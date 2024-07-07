@@ -1,7 +1,7 @@
-# QA with RAG
+# Q&A with RAG
 
 ## Project Description
-This folder contains a Retrieval-Augmented Generation (RAG) Question Answering (QA) application. 
+This folder contains a Retrieval-Augmented Generation (RAG) Questions & Answers (Q&A) application. 
 
 ## How to Install and Run
 
