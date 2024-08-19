@@ -17,12 +17,12 @@ def calc_f1_score (tp , fp , fn):
     """
     # Check if inputs are integers and greater than 0
     if not (isinstance(tp, int) and isinstance(fp, int) and isinstance(fn, int)):
-        print(f"Error: tp, fp, and fn must be int.")
+        print("Error: tp, fp, and fn must be int.")
         return
 
     # Check if inputs are greater than 0
     if tp <= 0 or fp <= 0 or fn <= 0:
-        print(f"Error: tp, fp, and fn must be greater than zero.")
+        print("Error: tp, fp, and fn must be greater than zero.")
         return
 
     # Calculate precision and recall
@@ -43,5 +43,5 @@ if __name__ == "__main__":
     calc_f1_score (tp =2, fp =3, fn =5)
     calc_f1_score (tp =2, fp =0, fn =5)
 
-    assert round ( calc_f1_score (tp =2, fp =3, fn =5) , 2) == 0.33
+    assert math.isclose(round ( calc_f1_score (tp =2, fp =3, fn =5) , 2), 0.33, rel_tol=1e-09, abs_tol=1e-09)
     print ( round ( calc_f1_score (tp =2, fp =4, fn =5) , 2))
